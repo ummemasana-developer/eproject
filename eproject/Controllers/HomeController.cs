@@ -16,6 +16,7 @@ namespace eproject.Controllers
         public IActionResult Index()
         {
             var age = 10;
+            var name = "ali";
             return View();
         }
 
