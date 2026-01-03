@@ -1,3 +1,4 @@
+using eproject.Models;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ namespace eproject
             builder.Services.AddControllersWithViews();
             var provider=builder.Services.BuildServiceProvider();
             var config=provider.GetService<IConfiguration>();
-            builder.Services.AddDbContext<DbModel>(item => item.UseSqlServer)(config .GetConnectionString("dbcs"));
+            builder.Services.AddDbContext<DbModel>(item => r)(config .GetConnectionString("dbcs"));
 
 
             var app = builder.Build();
